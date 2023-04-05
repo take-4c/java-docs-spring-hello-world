@@ -19,17 +19,27 @@ public class DemoApplication {
         ch.qos.logback.classic.Logger log = (ch.qos.logback.classic.Logger)logger;
         log.setLevel(Level.TRACE); 
 
-        logger.trace("trace message");
-        logger.debug("debug message");
-        logger.info("info message");
-        logger.warn("warn message");
-        logger.error("error message");
+        logger.trace("trace message from main().");
+        logger.debug("debug message from main().");
+        logger.info("info message from main().");
+        logger.warn("warn message from main().");
+        logger.error("error message from main().");
 
 		SpringApplication.run(DemoApplication.class, args);
 	}
 
 	@RequestMapping("/")
 	String sayHello() {
-		return "Hello World! XXXX";
+        Logger logger = LoggerFactory.getLogger(DemoApplication.class);
+        ch.qos.logback.classic.Logger log = (ch.qos.logback.classic.Logger)logger;
+        log.setLevel(Level.TRACE); 
+
+        logger.trace("trace message from sayHello().");
+        logger.debug("debug message from sayHello().");
+        logger.info("info message from sayHello().");
+        logger.warn("warn message from sayHello().");
+        logger.error("error message from sayHello().");
+
+		return "Hello World! XXXXYYYY";
 	}
 }
