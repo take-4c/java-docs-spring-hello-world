@@ -30,6 +30,6 @@ public class DemoApplication {
 
 	@RequestMapping("/")
 	String sayHello() {
-		return "Hello World! This is a sample java program!";
+		return "Hello World! XXXX";
 	}
 }
